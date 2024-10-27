@@ -597,10 +597,35 @@ progress {
   content: "— ";
 }
 
+/* Estilos generales para las imágenes */
 .img-fluid {
-  max-width: 100%;
-  height: auto;
+  max-width: 300px; /* Ancho máximo en computadoras */
+  height: auto; /* Mantiene la proporción de la imagen */
 }
+
+/* Estilos específicos para dispositivos móviles */
+@media (max-width: 768px) {
+  .img-fluid {
+      max-width: 100%; /* Ancho al 100% en móviles */
+      height: auto; /* Mantiene la proporción */
+  }
+
+  .p-5 {
+      padding: 1rem; /* Ajusta el padding para que se vea mejor en móvil */
+  }
+}
+
+/* Ajuste adicional para pantallas grandes si es necesario */
+@media (min-width: 769px) {
+  .img-fluid {
+      max-height: 400px; /* Ajusta la altura máxima en computadoras */
+      width: auto; /* Mantiene la proporción */
+  }
+}
+
+
+
+
 
 .img-thumbnail {
   padding: 0.25rem;
@@ -4163,7 +4188,7 @@ textarea.form-control-lg {
   --bs-card-cap-color: ;
   --bs-card-height: ;
   --bs-card-color: ;
-  --bs-card-bg: #fff;
+  --bs-card-bg: var(--darkreader-bg--bs-card-bg, #181a1b);
   --bs-card-img-overlay-padding: 1rem;
   --bs-card-group-margin: 0.75rem;
   position: relative;
@@ -8241,7 +8266,11 @@ textarea.form-control-lg {
 .text-muted {
   --bs-text-opacity: 1;
   color: rgb(238, 230, 218) !important;
+  font-size: 0.8rem; /* Tamaño de fuente más pequeño */
+  padding: 5px; /* Espaciado interno */
 }
+
+
 
 .text-black-50 {
   --bs-text-opacity: 1;
@@ -11736,4 +11765,31 @@ html {
     width: 1.5vw;
     left: -2vw;
   }
+  
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+      background-color: rgba(0, 0, 0, 0.5); /* Fondo negro semitransparente */
+      color: white; /* Cambia el color de las flechas a blanco para mayor contraste */
+      width: 2rem; /* Ajusta el ancho según sea necesario */
+      height: 2rem; /* Ajusta la altura según sea necesario */
+      border-radius: 50%; /* Hace que el fondo sea redondeado */
+      display: flex; /* Para centrar el contenido */
+      align-items: center; /* Centra verticalmente */
+      justify-content: center; /* Centra horizontalmente */
+  }
+  
+  .carousel-control-prev-icon::after,
+  .carousel-control-next-icon::after {
+      color: white; /* Cambia el color de las flechas a blanco para mayor contraste */
+      font-size: 2rem; /* Ajusta el tamaño según sea necesario */
+  }
+  
+  /* Alternativa si las flechas no se ven correctamente, puedes usar el siguiente código */
+  .carousel-control-prev-icon::before,
+  .carousel-control-next-icon::before {
+      color: white; /* Cambia el color de las flechas a blanco para mayor contraste */
+  }
+  
+  
+
 }
