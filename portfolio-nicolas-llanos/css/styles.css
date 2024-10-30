@@ -2022,8 +2022,8 @@ progress {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #212529;
-  background-color: #fff;
+  color: #e7e7e7;
+  background-color: rgb(32,34,36);
   background-clip: padding-box;
   border: 1px solid #ced4da;
   -webkit-appearance: none;
@@ -2044,8 +2044,8 @@ progress {
   cursor: pointer;
 }
 .form-control:focus {
-  color: #212529;
-  background-color: #fff;
+  color: #e7e7e7;
+  background-color:#202223;
   border-color: #8f98f9;
   outline: 0;
   box-shadow: 0 0 0 0.25rem rgba(30, 48, 243, 0.25);
@@ -2062,7 +2062,7 @@ progress {
   opacity: 1;
 }
 .form-control:disabled {
-  background-color: #e9ecef;
+  background-color: #202223;
   opacity: 1;
 }
 .form-control::file-selector-button {
@@ -11789,7 +11789,10 @@ html {
   .carousel-control-next-icon::before {
       color: white; /* Cambia el color de las flechas a blanco para mayor contraste */
   }
+  /* Para centrar el carrusel y ajustar el tamaño en pantallas grandes */
+
   
+
   
 
 }
